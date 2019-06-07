@@ -13,10 +13,6 @@ export default class WebGLView {
 
 		this.samples = [
 			'images/sample-01.png',
-			'images/sample-02.png',
-			'images/sample-03.png',
-			'images/sample-04.png',
-			'images/sample-05.png',
 		];
 
 		this.initThree();
@@ -68,13 +64,7 @@ export default class WebGLView {
 
 	goto(index) {
 		// init next
-		if (this.currSample == null) this.particles.init(this.samples[index]);
-		// hide curr then init next
-		else {
-			this.particles.hide(true).then(() => {
-				this.particles.init(this.samples[index]);
-			});
-		}
+		this.particles.init(this.samples[0]);
 
 		this.currSample = index;
 	}

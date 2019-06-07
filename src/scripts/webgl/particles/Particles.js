@@ -12,6 +12,7 @@ export default class Particles {
 	}
 
 	init(src) {
+		console.log('** particles init **', src);
 		const loader = new THREE.TextureLoader();
 
 		loader.load(src, (texture) => {

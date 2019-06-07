@@ -21,7 +21,6 @@ export default class GUIView {
 
 		this.initControlKit();
 		// this.initStats();
-
 		// this.disable();
 	}
 

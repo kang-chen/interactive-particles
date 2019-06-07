@@ -26,18 +26,15 @@ export default class App {
 
 	addListeners() {
 		this.handlerAnimate = this.animate.bind(this);
-
 		window.addEventListener('resize', this.resize.bind(this));
 		window.addEventListener('keyup', this.keyup.bind(this));
-		
 		const el = this.webgl.renderer.domElement;
-		el.addEventListener('click', this.click.bind(this));
+		// el.addEventListener('click', this.click.bind(this));
 	}
 
 	animate() {
 		this.update();
 		this.draw();
-
 		this.raf = requestAnimationFrame(this.handlerAnimate);
 	}
 
@@ -59,7 +56,7 @@ export default class App {
 	// ---------------------------------------------------------------------------------------------
 	// EVENT HANDLERS
 	// ---------------------------------------------------------------------------------------------
-
+	
 	resize() {
 		if (this.webgl) this.webgl.resize();
 	}
@@ -69,7 +66,7 @@ export default class App {
 		if (e.keyCode == 71) { if (this.gui) this.gui.toggle(); }
 	}
 
-	click(e) {
-		this.webgl.next();
-	}
+	// click(e) {
+	// 	this.webgl.next();
+	// }
 }
