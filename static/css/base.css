@@ -34,10 +34,14 @@ a:focus {
 }
 
 .frame {
-	padding: 3rem 5vw;
+	/* padding: 3rem 5vw; */
 	text-align: center;
 	position: relative;
 	z-index: 1000;
+
+	@media only screen and (min-width: 640px) {
+		padding: 0;
+	}
 }
 
 .frame__title {
